@@ -4,7 +4,7 @@ import NextLink from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { GithubIcon, HeartFilledIcon } from "@/components/icons";
+import { GithubIcon, HeartFilledIcon, GoogleIcon } from "@/components/icons";
 
 export const Navbar = () => {
 	return (
@@ -51,6 +51,17 @@ export const Navbar = () => {
 				<ThemeSwitch />
 				<NavbarMenuToggle />
 			</NavbarContent>
+
+			<NavbarItem className="hidden md:flex">
+				<Button
+					className="text-sm font-normal text-default-600 bg-default-100"
+					startContent={<GoogleIcon className="text-danger" />}
+					variant="flat"
+				// onClick={handleGoogleLogin}
+				>
+					Login with Google
+				</Button>
+			</NavbarItem>
 		</HeroUINavbar>
 	);
 };
